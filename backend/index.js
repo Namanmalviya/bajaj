@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
 });
 
 // Database connection & Server Boot
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/deskflow';
+const MONGODB_URI = process.env.MONGODB_URI;
 
 mongoose.connect(MONGODB_URI)
   .then(() => {

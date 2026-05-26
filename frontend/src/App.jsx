@@ -7,7 +7,7 @@ import CreateDrawer from './components/CreateDrawer';
 import { ToastsContainer } from './components/Toasts';
 import './App.css';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 export default function App() {
   const [tickets, setTickets] = useState([]);
@@ -217,7 +217,7 @@ export default function App() {
 
         {/* Board Viewer */}
         {loading ? (
-          <div className="flex-grow flex flex-col items-center justify-center min-h-[400px] border border-stone-200 bg-white rounded-2xl p-12 text-center shadow-2xs">
+          <div className="grow flex flex-col items-center justify-center min-h-100 border border-stone-200 bg-white rounded-2xl p-12 text-center shadow-2xs">
             <div className="flex flex-col items-center gap-4">
               <div className="w-10 h-10 border-2 border-slate-900 border-t-transparent rounded-full animate-spin"></div>
               <p className="text-sm font-semibold text-slate-500 font-sans">
@@ -226,7 +226,7 @@ export default function App() {
             </div>
           </div>
         ) : (
-          <div className="flex-grow">
+          <div className="grow">
             <Board
               tickets={tickets}
               onStatusChange={handleStatusChange}
