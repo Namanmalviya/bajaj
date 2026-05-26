@@ -184,7 +184,7 @@ export default function App() {
           </div>
           <div>
             <h1 className="text-xl font-bold font-display text-slate-800 tracking-tight leading-none flex items-center gap-1.5">
-              DeskFlow
+              सहायक
             </h1>
             <p className="text-xs text-slate-400 font-sans mt-1">
               Support Ticket Triage Board
