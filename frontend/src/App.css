@@ -1,0 +1,61 @@
+/* Custom font and scrollbar settings for a humanoid/organic user interface */
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+/* Custom Display headers */
+.font-display {
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* Slide in animation for toast notifications */
+@keyframes slide-in {
+  from {
+    transform: translateY(1rem) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom fine-scrollbar for card lists */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(120, 113, 108, 0.15);
+  border-radius: 9999px;
+  transition: background 0.2s;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 113, 108, 0.3);
+}
+
+/* Drag-n-drop scale transitions */
+.cursor-grab:active {
+  cursor: grabbing;
+}
+
+/* Button active push-down effects */
+.active\:scale-98:active {
+  transform: scale(0.98);
+}
+.active\:scale-95:active {
+  transform: scale(0.95);
+}
